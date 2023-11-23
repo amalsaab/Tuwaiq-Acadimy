@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Navbar from './Component1/Navbar'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+  
     </>
   )
 }
 
 export default App
+<nav data-mdb-navbar-init className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <div className="container">
+    <a className="navbar-brand me-2" href="https://mdbgo.com/">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+        height="16"
+        alt="MDB Logo"
+        loading="lazy"
+      />
+    </a>
+    <button
+      data-mdb-collapse-init
+      className="navbar-toggler"
+      type="button"
+      data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i className="fas fa-bars"></i>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarButtonsExample">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link" href="#">Dashboard</a>
+        </li>
+      </ul>
+      <div className="d-flex align-items-center">
+        <button data-mdb-ripple-init type="button" className="btn btn-link px-3 me-2">
+          Login
+        </button>
+        <button data-mdb-ripple-init type="button" className="btn btn-primary me-3">
+          Sign up for free
+        </button>
+        <a
+          data-mdb-ripple-init
+          className="btn btn-dark px-3"
+          href="https://github.com/mdbootstrap/mdb-ui-kit"
+          role="button"
+          ><i className="fab fa-github"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</nav>
